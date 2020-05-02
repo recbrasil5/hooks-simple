@@ -12,9 +12,12 @@ const ResourceList = ({ resource }) => {
       setResources(response.data);
   };
 
-  useEffect(() => {
+  useEffect(
+    () => {
     fetchResource(resource);
-  }, [])
+    }, 
+    [resource]
+  )
   
   return <div>{resources.length}</div>;
 };
